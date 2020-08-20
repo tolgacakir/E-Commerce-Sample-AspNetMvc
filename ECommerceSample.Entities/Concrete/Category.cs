@@ -1,10 +1,11 @@
-﻿using System;
+﻿using ECommerceSample.Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ECommerceSample.Entities.Concrete
 {
-    public class Category
+    public class Category : IEntity
     {
         public short Id { get; set; }
         public string Name { get; set; }
