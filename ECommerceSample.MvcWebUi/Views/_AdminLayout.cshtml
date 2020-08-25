@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">E-Commerce Sample App</a>
+            
+            <a class="btn btn-xs btn-primary align-right" asp-controller="product" asp-action="Index">Logout</a>
+        </nav>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
+

@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceSample.Entities", "ECommerceSample.Entities\ECommerceSample.Entities.csproj", "{896ACC3A-028B-4303-A808-A92BE2388C09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceSample.Entities", "ECommerceSample.Entities\ECommerceSample.Entities.csproj", "{896ACC3A-028B-4303-A808-A92BE2388C09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceSample.Core", "ECommerceSample.Core\ECommerceSample.Core.csproj", "{4B5BF990-2651-4C35-A86E-1B5D7C3B82D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceSample.Core", "ECommerceSample.Core\ECommerceSample.Core.csproj", "{4B5BF990-2651-4C35-A86E-1B5D7C3B82D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceSample.DataAccessLayer", "ECommerceSample.DataAccessLayer\ECommerceSample.DataAccessLayer.csproj", "{338F2873-C826-45E9-88BA-172CD334BACF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceSample.DataAccessLayer", "ECommerceSample.DataAccessLayer\ECommerceSample.DataAccessLayer.csproj", "{338F2873-C826-45E9-88BA-172CD334BACF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceSample.BusinessLogicLayer", "ECommerceSample.BusinessLogicLayer\ECommerceSample.BusinessLogicLayer.csproj", "{874CCE52-C4A6-4D4C-BF85-E7773B13AA43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceSample.BusinessLogicLayer", "ECommerceSample.BusinessLogicLayer\ECommerceSample.BusinessLogicLayer.csproj", "{874CCE52-C4A6-4D4C-BF85-E7773B13AA43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceSample.MvcWebUi", "ECommerceSample.MvcWebUi\ECommerceSample.MvcWebUi.csproj", "{639BE522-02EA-4FCA-9B27-270615F82427}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{874CCE52-C4A6-4D4C-BF85-E7773B13AA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{874CCE52-C4A6-4D4C-BF85-E7773B13AA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{874CCE52-C4A6-4D4C-BF85-E7773B13AA43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{639BE522-02EA-4FCA-9B27-270615F82427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{639BE522-02EA-4FCA-9B27-270615F82427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{639BE522-02EA-4FCA-9B27-270615F82427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{639BE522-02EA-4FCA-9B27-270615F82427}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

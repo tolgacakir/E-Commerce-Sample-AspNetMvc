@@ -1,0 +1,47 @@
+﻿@model ECommerceSample.MvcWebUi.Models.ProductAndCategoryListViewModel
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="list-group hover">
+            @foreach (var c in Model.Categories)
+            {
+                var css = "list-group-item";
+                if (c.Id == Model.CurrentCategory?.Id)
+                {
+                    css += " active";
+                }
+                <a href="/product/index?categoryId=@c.Id" class="@css">@c.Name</a>
+            }
+        </div>
+
+        <div class="table-responsive col lg-8">
+            <table class="table table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Unit Price</th>
+                        <th>Units In Stock</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                @foreach (var p in Model.Products)
+                {
+                    <tr>
+                        <td>@p.Name</td>
+                        <td>@p.UnitPrice</td>
+                        <td>@p.UnitsInStock</td>
+                        <td><a class="btn btn-xs btn-success">Details</a></td>
+                    </tr>
+                }
+            </table>
+
+        </div>
+
+    </div>
+
+</div>

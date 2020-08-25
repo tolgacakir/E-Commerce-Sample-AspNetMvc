@@ -31,6 +31,11 @@ namespace ECommerceSample.BusinessLogicLayer.Concrete
             return _categoryDal.GetList();
         }
 
+        public Category GetById(int categoryId)
+        {
+            return _categoryDal.Get(c => c.Id == categoryId);
+        }
+
         public void Update(Category category)
         {
             _categoryDal.Update(category);

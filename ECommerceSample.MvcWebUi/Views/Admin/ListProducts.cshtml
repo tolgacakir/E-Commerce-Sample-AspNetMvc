@@ -1,0 +1,39 @@
+﻿@model ECommerceSample.MvcWebUi.Models.ProductAndCategoryListViewModel
+@{
+    ViewData["Title"] = "ListProducts";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+<br />
+<h2 class="h2 ml-2">Admin Page</h2>
+<br />
+<a class="btn btn-xs btn-primary align-right lm-2" asp-controller="admin" asp-action="ListCategories">Go To List of Categories</a>
+<br />
+<br />
+<a class="btn btn-xs btn-success" asp-controller="Admin" asp-action="AddProduct">Add New Product</a>
+<br />
+<div>
+    <table class="table table-responsive table-striped table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Product Name</th>
+                <th>Unit Price</th>
+                <th>Units In Stock</th>
+                <th>Category</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        @foreach (var p in Model.Products)
+        {
+    <tr>
+        <td>@p.Name</td>
+        <td>@p.UnitPrice</td>
+        <td>@p.UnitsInStock</td>
+        <td>@Model.Categories.FirstOrDefault(c=>c.Id == p.CategoryId).Name</td>
+        <td><a class="btn btn-xs btn-info" asp-controller="Admin" asp-action="UpdateProduct" asp-route-productId="@p.Id">Update</a></td>
+        <td><a class="btn btn-xs btn-danger" asp-controller="Admin" asp-action="DeleteProduct" asp-route-productId="@p.Id">Delete</a></td>
+    </tr>
+        }
+    </table>
+</div>

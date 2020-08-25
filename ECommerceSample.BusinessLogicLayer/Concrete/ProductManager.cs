@@ -31,14 +31,21 @@ namespace ECommerceSample.BusinessLogicLayer.Concrete
             return _productDal.GetList();
         }
 
-        public List<Product> GetByCategory(Category category)
+        public List<Product> GetByCategoryId(short categoryId)
         {
-            return _productDal.GetList(p => p.CategoryId == category.Id);
+            var x= _productDal.GetList(p => p.CategoryId == categoryId || categoryId==0);
+            return x;
         }
 
         public void Update(Product product)
         {
             _productDal.Update(product);
         }
+
+        public Product GetById(int productId)
+        {
+            return _productDal.Get(m => m.Id == productId);
+        }
+
     }
 }

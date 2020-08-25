@@ -1,0 +1,37 @@
+﻿@model ECommerceSample.MvcWebUi.Models.CategoriesViewModel
+@{
+    ViewData["Title"] = "ListCategories";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+<br />
+<h2 class="h2 ml-2">Admin Page</h2>
+<br />
+<a class="btn btn-xs btn-primary align-right lm-2" asp-controller="admin" asp-action="ListProducts">Go To List of Products</a>
+<br />
+<br />
+<a class="btn btn-xs btn-success" asp-controller="Admin" asp-action="AddCategory">Add New Category</a>
+<br />
+<div>
+    <table class="table table-responsive table-striped table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Category Name</th>
+                <th>Description</th>
+                <th>Picture Path</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        @foreach (var c in Model.Categories)
+        {
+            <tr>
+                <td>@c.Name</td>
+                <td>@c.Description</td>
+                <td>@c.Picture</td>
+                <td><a class="btn btn-xs btn-info" asp-controller="Admin" asp-action="UpdateCategory" asp-route-categoryId="@c.Id">Update</a></td>
+                <td><a class="btn btn-xs btn-danger" asp-controller="Admin" asp-action="DeleteCategory" asp-route-categoryId="@c.Id">Delete</a></td>
+            </tr>
+        }
+    </table>
+</div>

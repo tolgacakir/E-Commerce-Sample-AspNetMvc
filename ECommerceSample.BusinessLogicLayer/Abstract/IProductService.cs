@@ -8,9 +8,11 @@ namespace ECommerceSample.BusinessLogicLayer.Abstract
     public interface IProductService
     {
         List<Product> GetAll();
-        List<Product> GetByCategory(Category category);
+        List<Product> GetByCategoryId(short categoryId);
         void Add(Product product);
         void Update(Product product);
-        void Delete(Product product); 
+        void Delete(Product product);
+        Product GetById(int productId);
+
     }
 }

@@ -1,0 +1,28 @@
+﻿@model ECommerceSample.MvcWebUi.Models.CategoriesViewModel
+@{
+    ViewData["Title"] = "AddCategory";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+<h1>Add New Category</h1>
+
+<form asp-controller="admin" asp-action="AddCategory" method="post">
+    <div class="form-group">
+        <label asp-for="Category.Name"></label>
+        <input asp-for="Category.Name" class="form-control" placeholder="Category Name" />
+        <span asp-validation-for="Category.Name"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Category.Description"></label>
+        <input asp-for="Category.Description" class="form-control" placeholder="Category Description" />
+        <span asp-validation-for="Category.Description"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Category.Picture"></label>
+        <input asp-for="Category.Picture" class="form-control" placeholder="Category Picture Path" />
+    </div>
+
+    <input type="submit" value="AddCategory" class="btn btn-xs btn-success" />
+</form>
